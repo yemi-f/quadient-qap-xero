@@ -47,12 +47,10 @@ class XeroAPIClient
     }
     public function fetchData($endpoint, $params = [])
     {
-        // If the token is expired, refresh it
         if ($this->storage->getHasExpired()) {
             $this->refreshAccessToken();
         }
 
-        // Set the base URL and client headers
         $client = $this->client;
         $url = $this->baseUrl . "/$endpoint";
         $headers = [
@@ -62,25 +60,21 @@ class XeroAPIClient
         ];
 
         try {
-            // Merge the query parameters if provided (e.g., for filtering invoices)
+            // merge the query parameters if provided (e.g., for filtering invoices)
             $options = ['headers' => $headers];
             if (!empty($params)) {
                 $options['query'] = $params;
             }
 
-            // Make the GET request to the API
             $response = $client->request('GET', $url, $options);
 
-            // Check if the response is successful
             if ($response->getStatusCode() == 200) {
-                // Return the response body as an array
                 return json_decode($response->getBody(), true);
             } else {
                 echo "Request failed with status code: " . $response->getStatusCode();
                 return null;
             }
         } catch (RequestException $e) {
-            // Handle request exceptions (errors from API or network issues)
             if ($e->hasResponse()) {
                 $response = $e->getResponse();
                 echo "Error: " . $response->getStatusCode() . " - " . $response->getBody();
