@@ -16,6 +16,13 @@ Follow the intructions below to setup the `backend` and the `frontend`.
 - using "where" because Invoice.Type is an OPTIMISED ELEMENT https://developer.xero.com/documentation/api/accounting/invoices#optimised-use-of-the-where-filter
 - https://api.xero.com/api.xro/2.0/Invoices?where=Type%3D%22ACCPAY%22
 
+## Demo
+
+
+https://github.com/user-attachments/assets/57e7f7a7-dcad-481c-8e4c-dd32d50a3083
+
+
+
 ## Getting Started
 
 To run locally, you'll need a local web server with PHP support.
