@@ -37,7 +37,7 @@ composer install
 To obtain your API keys, follow these steps and create a Xero app
 
 - Create a [free Xero user account](https://www.xero.com/us/signup/api/) (if you don't have one)
-- Login to [Xero developer center](https://developer.xero.com/app/manage)
+- Login to https://developer.xero.com/app/manage > Configuration
 - Click "New App" link
 - Enter your App name, company url, privacy policy url.
 - Enter the redirect URI (your callback url - i.e. `http://localhost:8888/quadient-qap-xero/backend/callback.php`)
