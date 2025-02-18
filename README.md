@@ -18,10 +18,7 @@ Follow the intructions below to setup the `backend` and the `frontend`.
 
 ## Demo
 
-
 https://github.com/user-attachments/assets/57e7f7a7-dcad-481c-8e4c-dd32d50a3083
-
-
 
 ## Getting Started
 
@@ -60,12 +57,13 @@ To obtain your API keys, follow these steps and create a Xero app
 - Agree to terms and condition and click "Create App".
 - Click "Generate a secret" button.
 - Copy your client id and client secret and save for use later.
-- Add client ID, client secret and redirect URI to backend/.env (.env file should be in the format of .env.example)
+- create an `.env` file in `backend` (.env file should be in the format of .env.example)
+- Add client ID, client secret and redirect URI to `backend/.env`
 - Click the "Save" button. You secret is now hidden.
 
 ## Configure API keys
 
-You'll need to update your .env file for clientId, clientSecret and redirectUri
+You'll need to update your `.env` file for clientId, clientSecret and redirectUri
 
 Sample PHP code from backend/authorization.php
 
