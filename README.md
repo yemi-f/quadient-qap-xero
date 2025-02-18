@@ -1,6 +1,8 @@
 # quadient-qap-xero
 
-Connect to a Xero Organisation and make calls to `accounts` and `invoices` - I recommend you connecting to the Demo company.
+Connect to a Xero Organisation and make calls to `accounts` and `invoices` - I recommend connecting to the Demo company.
+
+Follow the intructions below to setup the `backend` and the `frontend`.
 
 ## Scoping the Solution
 
@@ -20,17 +22,24 @@ To run locally, you'll need a local web server with PHP support.
 
 - MAMP is a good option [Download MAMP](https://www.mamp.info/en/downloads/)
 
+# Backend
+
 ### Download this code
 
-- Clone this repo into your local server webroot. i.e. `htdocs`
+- Clone (or download) this repo into your local server webroot
+- if downloaded, rename folder from `quadient-qap-xero-main` to `quadient-qap-xero`
 - Launch a terminal app and change to the `backend` directory
 - Download dependencies with Composer using the following command:
 
 ```
-composer install
+cd backend
 ```
 
-# Backend
+then
+
+```
+composer install
+```
 
 ## Create a Xero App
 
@@ -79,7 +88,22 @@ Launch your browser and navigate to http://localhost:8888/quadient-qap-xero/back
 
 ## Setup React App (_vite_)
 
-- `cd frontend`
-- `npm install`
-- `npm run dev`
-- navigate to resulting URL
+From directory root
+
+```
+cd frontend
+```
+
+Download dependencies with
+
+```
+npm install
+```
+
+Start the development server with
+
+```
+npm run dev
+```
+
+then navigate to resulting URL.
