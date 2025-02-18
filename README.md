@@ -28,7 +28,7 @@ To obtain your API keys, follow these steps and create a Xero app
 - Login to [Xero developer center](https://developer.xero.com/app/manage)
 - Click "New App" link
 - Enter your App name, company url, privacy policy url.
-- Enter the redirect URI (your callback url - i.e. `http://localhost:8888/xero-php-oauth2-app/backend/callback.php`)
+- Enter the redirect URI (your callback url - i.e. `http://localhost:8888/quadient-qap-xero/backend/callback.php`)
 - Agree to terms and condition and click "Create App".
 - Click "Generate a secret" button.
 - Copy your client id and client secret and save for use later.
@@ -56,16 +56,16 @@ $provider = new \League\OAuth2\Client\Provider\GenericProvider([
 
 ## Take it for a spin
 
-Launch your browser and navigate to http://localhost:8888/quadient-quap-xero/backend/ (or whatever the correct path is).
+Launch your browser and navigate to http://localhost:8888/quadient-qap-xero/backend/ (or whatever the correct path is).
 
 - You should see a connect to xero link.
 - Click the link, login to Xero (if you aren't already)
 - Grant access to your user account and select the Demo company to connect to.
-- Done - try out the different API calls
+- Navigate to http://localhost:8888/quadient-quap-xero/backend/fetch-qap-data.php
 
 # Frontend
 
-## Setup React APp
+## Setup React App
 
 - `cd frontend`
 - `npm install`
