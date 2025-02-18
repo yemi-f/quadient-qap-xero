@@ -1,6 +1,18 @@
 # quadient-qap-xero
 
-Connect to a Xero Organisation and make real API calls - I recommend you connect to the Demo company.
+Connect to a Xero Organisation and make calls to `accounts` and `invoices` - I recommend you connect to the Demo company.
+
+## Scoping the Solution
+
+### Accounts
+
+- get all accounts https://developer.xero.com/documentation/api/accounting/accounts
+
+### Vendors
+
+- filter by ACCPAY (vendors === supplier invoice) - where=Type="ACCPAY" https://developer.xero.com/documentation/api/accounting/types#invoices
+- using "where" because Invoice.Type is an OPTIMISED ELEMENT https://developer.xero.com/documentation/api/accounting/invoices#optimised-use-of-the-where-filter
+- https://api.xero.com/api.xro/2.0/Invoices?where=Type%3D%22ACCPAY%22
 
 ## Getting Started
 
