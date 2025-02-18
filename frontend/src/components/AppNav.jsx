@@ -1,14 +1,13 @@
-import { NavLink } from 'react-router';
+import { NavLink } from "react-router";
 
 export function AppNav() {
   return (
     <nav>
       <ul>
         <li>
-          <strong>Quadient</strong>
-          {/* <NavLink to="/" end>
+          <NavLink to="/" end>
             Home
-          </NavLink> */}
+          </NavLink>
         </li>
       </ul>
       <ul>

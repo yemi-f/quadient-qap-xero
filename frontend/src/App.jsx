@@ -1,13 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import { AppNav } from "./components/AppNav";
 
 function App() {
   return (
     <div className="container">
       <h1>Quadient</h1>
+      <p>
+        Readme & demo on{" "}
+        <a
+          href="https://github.com/yemi-f/quadient-qap-xero?tab=readme-ov-file#quadient-qap-xero"
+          target="_blank"
+        >
+          Github
+        </a>
+      </p>
     </div>
   );
 }

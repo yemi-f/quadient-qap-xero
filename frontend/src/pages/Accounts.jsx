@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { AppNav } from "../components/AppNav";
 import { useQuery } from "@tanstack/react-query";
 import { fetchLocalData } from "../api/fetchLocalData";
 
@@ -20,31 +18,23 @@ function Accounts() {
               <td>Name</td>
               <td>Status</td>
               <td>Type</td>
-              <td>Last Updated</td>
+              <td>Reporting Code Name</td>
             </tr>
           </thead>
           <tbody>
             {accounts.map(
-              ({
-                AccountID,
-                Name,
-                Status,
-                Type,
-                Description,
-                ReportingCodeName,
-                UpdatedDateUTC,
-              }) => (
+              ({ AccountID, Name, Status, Type, ReportingCodeName }) => (
                 <tr key={AccountID}>
                   <td>{Name}</td>
                   <td>{Status}</td>
                   <td>{Type}</td>
-                  <td>{UpdatedDateUTC}</td>
+                  <td>{ReportingCodeName}</td>
                 </tr>
               )
             )}
             {accounts.length === 0 && (
               <tr>
-                <td colSpan={5}>No data available</td>
+                <td colSpan={4}>No data available</td>
               </tr>
             )}
           </tbody>

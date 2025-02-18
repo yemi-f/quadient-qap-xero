@@ -1,6 +1,6 @@
 # quadient-qap-xero
 
-Connect to a Xero Organisation and make calls to `accounts` and `invoices` - I recommend you connect to the Demo company.
+Connect to a Xero Organisation and make calls to `accounts` and `invoices` - I recommend you connecting to the Demo company.
 
 ## Scoping the Solution
 
@@ -77,7 +77,7 @@ Launch your browser and navigate to http://localhost:8888/quadient-qap-xero/back
 
 # Frontend
 
-## Setup React App
+## Setup React App (_vite_)
 
 - `cd frontend`
 - `npm install`

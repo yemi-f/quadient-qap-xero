@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { AppNav } from "../components/AppNav";
 import { useQuery } from "@tanstack/react-query";
 import { fetchLocalData } from "../api/fetchLocalData";
 
@@ -8,9 +6,6 @@ function Vendors() {
     queryKey: ["vendors"],
     queryFn: () => fetchLocalData("vendors.json"),
   });
-
-  // if (isLoading) return <p>Loading...</p>
-  // if (error) return <p>Error: {error.message}</p>
   const vendors = data?.Invoices ?? [];
 
   return (
@@ -22,8 +17,11 @@ function Vendors() {
             <tr>
               <td>Name</td>
               <td>Status</td>
-              <td>Due Date</td>
+              <td>Amount Due</td>
+              <td>Amount Paid</td>
+              <td>Amount Credited</td>
               <td>Currency Code</td>
+              <td>Due Date</td>
             </tr>
           </thead>
           <tbody>
@@ -35,21 +33,23 @@ function Vendors() {
                 AmountPaid,
                 AmountCredited,
                 Contact,
-                Date,
-                DueDate,
+                DueDateString,
                 CurrencyCode,
               }) => (
                 <tr key={InvoiceID}>
                   <td>{Contact.Name}</td>
                   <td>{Status}</td>
-                  <td>{DueDate}</td>
+                  <td>{AmountDue}</td>
+                  <td>{AmountPaid}</td>
+                  <td>{AmountCredited}</td>
                   <td>{CurrencyCode}</td>
+                  <td>{DueDateString}</td>
                 </tr>
               )
             )}
             {vendors.length === 0 && (
               <tr>
-                <td colSpan={4}>No data available</td>
+                <td colSpan={7}>No data available</td>
               </tr>
             )}
           </tbody>
